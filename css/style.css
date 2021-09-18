@@ -29,11 +29,13 @@ body {
 }
 
 /* アニメーションをつけるクラス */
+
 .fade {
   opacity: 0;
 }
 
 /* アニメーション用のクラス */
+
 .fadeUp {
   animation-name: fadeUpAnime;
   animation-duration: 1.5s;
@@ -51,6 +53,7 @@ body {
     transform: translateY(0);
   }
 }
+
 .header {
   width: 100%;
   height: 5rem;
@@ -62,15 +65,18 @@ body {
   top: 0;
   z-index: 99;
 }
+
 .header__logo {
   text-decoration: none;
 }
+
 .header__logo__text {
   font-family: "Kaisei Tokumin", serif;
   color: #fff;
   padding-left: 2rem;
   z-index: 9999;
 }
+
 .header__menu-button {
   position: fixed;
   top: 0;
@@ -81,11 +87,13 @@ body {
   border-radius: 0.5rem;
   z-index: 9999;
 }
+
 @media (min-width: 769px) {
   .header__menu-button {
     display: none;
   }
 }
+
 .header__menu-button__span {
   display: inline-block;
   transition: all 0.4s;
@@ -96,15 +104,19 @@ body {
   border-radius: 0.5rem;
   width: 45%;
 }
+
 .header__menu-button__span--1 {
   top: 1.3rem;
 }
+
 .header__menu-button__span--2 {
   top: 1.9rem;
 }
+
 .header__menu-button__span--3 {
   top: 2.5rem;
 }
+
 .header__menu-button__span--3::after {
   content: "Menu";
   position: absolute;
@@ -114,36 +126,43 @@ body {
   font-size: 1rem;
   text-transform: uppercase;
 }
+
 .header__menu-button.active .header__menu-button__span--1 {
   top: 1.4rem;
   left: 1.8rem;
   transform: translateY(0.6rem) rotate(-45deg);
   width: 40%;
 }
+
 .header__menu-button.active .header__menu-button__span--2 {
   opacity: 0;
 }
+
 .header__menu-button.active .header__menu-button__span--3 {
   top: 2.6rem;
   left: 1.8rem;
   transform: translateY(-0.6rem) rotate(45deg);
   width: 40%;
 }
+
 .header__menu-button.active .header__menu-button__span--3::after {
   content: "close";
   transform: translateY(0) rotate(-45deg);
   top: 1rem;
   left: 0.5rem;
 }
+
 .header__sp-nav {
   /*ナビゲーションのためのCSS
   アクティブになったエリア*/
 }
+
 @media (min-width: 769px) {
   .header__sp-nav {
     display: none;
   }
 }
+
 .header__sp-nav.panelactive {
   /*position:fixed;にし
   z-indexの数値を大きくして前面へ*/
@@ -153,21 +172,30 @@ body {
   width: 100%;
   height: 100vh;
 }
-.header__sp-nav.panelactive, .header__sp-nav.panelactive .header__sp-nav--hidden {
+
+.header__sp-nav.panelactive,
+.header__sp-nav.panelactive .header__sp-nav--hidden {
   display: block;
 }
+
 @media (min-width: 769px) {
-  .header__sp-nav.panelactive, .header__sp-nav.panelactive .header__sp-nav--hidden {
+  .header__sp-nav.panelactive,
+  .header__sp-nav.panelactive .header__sp-nav--hidden {
     display: none;
   }
 }
-.header__sp-nav.panelactive, .header__sp-nav.panelactive .header__sp-nav__lists {
+
+.header__sp-nav.panelactive,
+.header__sp-nav.panelactive .header__sp-nav__lists {
   opacity: 1;
 }
-.header__sp-nav.panelactive__list, .header__sp-nav.panelactive .header__sp-nav__lists__list {
+
+.header__sp-nav.panelactive__list,
+.header__sp-nav.panelactive .header__sp-nav__lists__list {
   animation: gnaviAnime 1s 0.2s forwards;
   opacity: 0;
 }
+
 .header__sp-nav--hidden {
   display: none;
   position: fixed;
@@ -177,6 +205,7 @@ body {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
+
 .header__sp-nav__lists {
   opacity: 0;
   position: absolute;
@@ -187,17 +216,21 @@ body {
   text-align: center;
   transition: all 0.6s;
 }
+
 .header__sp-nav__lists__list {
   padding-bottom: 5rem;
   font-size: 2rem;
 }
+
 .header__sp-nav__lists__list__link {
   color: #fff;
   text-decoration: none;
 }
+
 .header__sp-nav__lists__list__link.active {
   border-bottom: 0.3rem solid #fff;
 }
+
 .header__bg-show--click {
   position: fixed;
   z-index: 3;
@@ -210,13 +243,16 @@ body {
   left: calc(50% - 5rem);
   transition: all 1s;
 }
+
 .header__bg-show--click.circleactive {
   transform: scale(50);
   transition: all 2s;
 }
+
 .header__pc-nav {
   display: none;
 }
+
 @media (min-width: 769px) {
   .header__pc-nav {
     display: block;
@@ -260,30 +296,37 @@ body {
     opacity: 1;
   }
 }
+
 .container {
   padding-top: 5rem;
   background-color: #ffe4c4;
 }
+
 @media (min-width: 796px) {
   .container {
     padding-top: 10rem;
   }
 }
+
 .container--display {
   display: inline-block;
 }
+
 .container__heading {
   font-family: "Kaisei Tokumin", serif;
   text-align: center;
 }
+
 @media (min-width: 769px) {
   .container__heading {
     font-size: 2.5rem;
   }
 }
+
 .container__box {
   padding-top: 3rem;
 }
+
 @media (min-width: 769px) {
   .container__box {
     display: flex;
@@ -292,12 +335,14 @@ body {
     padding: 0 5rem 5rem;
   }
 }
+
 .container__box__photo {
   width: 70%;
   height: 70%;
   border-radius: 50%;
   margin: 0 auto;
 }
+
 @media (min-width: 769px) {
   .container__box__photo {
     width: 50%;
@@ -305,15 +350,18 @@ body {
     padding-right: 3rem;
   }
 }
+
 .container__box__photo__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
 }
+
 .container__box__photo__img--filter {
   filter: blur(0.2rem);
 }
+
 .container__box__textarea {
   width: 30rem;
   margin: 2rem auto 0;
@@ -323,12 +371,14 @@ body {
   background-color: #fff;
   position: relative;
 }
+
 @media (min-width: 769px) {
   .container__box__textarea {
     height: 20rem;
     width: 40%;
   }
 }
+
 .container__box__textarea__text {
   padding: 2rem;
   font-size: 1.2rem;
@@ -336,11 +386,13 @@ body {
   text-decoration-color: #663300;
   line-height: 2rem;
 }
+
 @media (min-width: 769px) {
   .container__box__textarea__text {
     font-size: 1.4rem;
   }
 }
+
 .container__box__textarea__link {
   padding: 1rem;
   border-radius: 3rem;
@@ -356,6 +408,7 @@ body {
   right: 0;
   transition: all 0.3s;
 }
+
 @media (min-width: 769px) {
   .container__box__textarea__link:hover {
     box-shadow: none;
@@ -372,17 +425,21 @@ body {
   bottom: -5rem;
   z-index: -1;
 }
+
 .footer__heading {
   padding: 2rem 0 2rem 2rem;
 }
+
 .footer__information {
   padding-bottom: 1rem;
   text-align: center;
   font-size: 1.2rem;
 }
+
 .footer__information__text {
   padding-bottom: 1rem;
 }
+
 .footer__copy {
   text-align: center;
   display: block;
@@ -393,34 +450,41 @@ body {
 .sub-page {
   padding-top: 5rem;
 }
+
 .sub-page__photo {
   width: 100%;
   height: 30rem;
 }
+
 @media (min-width: 769px) {
   .sub-page__photo {
     height: calc(100vh - 5rem);
   }
 }
+
 .sub-page__photo__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .sub-page__heading {
   font-family: "Kaisei Tokumin", serif;
   text-align: center;
   padding-top: 5rem;
 }
+
 @media (min-width: 769px) {
   .sub-page__heading {
     padding-bottom: 5rem;
     font-size: 2.5rem;
   }
 }
+
 .sub-page__container {
   background-color: #ffe4c4;
 }
+
 @media (min-width: 769px) {
   .sub-page__container {
     display: flex;
@@ -429,6 +493,7 @@ body {
     padding: 0 5rem;
   }
 }
+
 .sub-page__container__photo {
   padding: 3rem 0 2rem;
   width: 20rem;
@@ -437,6 +502,7 @@ body {
   position: relative;
   margin: 0 auto;
 }
+
 @media (min-width: 769px) {
   .sub-page__container__photo {
     width: 45%;
@@ -444,6 +510,7 @@ body {
     padding: 0 3rem 15rem 0;
   }
 }
+
 .sub-page__container__photo__img {
   width: 100%;
   height: 100%;
@@ -451,9 +518,11 @@ body {
   border-radius: 50%;
   box-shadow: 0.3rem 0.3rem 0.3rem #000;
 }
+
 .sub-page__container__photo__img--filter {
   filter: blur(0.5rem);
 }
+
 .sub-page__container__textarea {
   width: 30rem;
   margin: 0 auto;
@@ -461,18 +530,21 @@ body {
   background-color: #fff;
   border-radius: 0.5rem;
 }
+
 @media (min-width: 769px) {
   .sub-page__container__textarea {
     width: 30%;
     margin-bottom: 5rem;
   }
 }
+
 .sub-page__container__textarea__text {
   padding: 2rem;
   text-decoration: underline;
   text-decoration-color: #663300;
   line-height: 2rem;
 }
+
 @media (min-width: 769px) {
   .sub-page__container__textarea__text {
     font-size: 1.3rem;

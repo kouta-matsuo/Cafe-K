@@ -3,9 +3,9 @@
     
       // ふわっ
       $('.fade').each(function(){ //fadeというクラス名が
-        let elemPos = $(this).offset().top + 50;//要素より、50px下の
-        let scroll = $(window).scrollTop();
-        let windowHeight = $(window).height();
+        var elemPos = $(this).offset().top + 50;//要素より、50px下の
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
         if (scroll >= elemPos - windowHeight){
         $(this).addClass('fadeUp');// 画面内に入ったらfadeUpというクラス名を追記
         }

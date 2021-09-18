@@ -4,11 +4,13 @@ $white: #fff;
 $chairo: #663300;
 $bezyu: #ffe4c4;
 // フォント
-$font: 'Kaisei Tokumin', serif;
+$font: 'Kaisei Tokumin',
+serif;
 * {
   margin: 0;
   padding: 0;
 }
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -16,43 +18,45 @@ html {
 }
 
 body {
-    background-color: $bezyu;
-    min-height: 100%;
-    box-sizing: border-box;
-    position: relative;
-    max-width: 100vw;
-    padding-bottom: 17rem;
+  background-color: $bezyu;
+  min-height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  max-width: 100vw;
+  padding-bottom: 17rem;
 }
 
 #slider {
-    width: 100%;
-    min-height: calc(var(--vh, 1vh) * 100) !important;
-    overflow: hidden;
-    z-index: -1;
-    position: sticky;
-    top: 5rem;
+  width: 100%;
+  min-height: calc(var(--vh, 1vh) * 100) !important;
+  overflow: hidden;
+  z-index: -1;
+  position: sticky;
+  top: 5rem;
 }
+
 /* アニメーションをつけるクラス */
 .fade {
-	opacity:0;
+  opacity: 0;
 }
 
 /* アニメーション用のクラス */
-.fadeUp{
-animation-name:fadeUpAnime;
-animation-duration: 1.5s;
-animation-fill-mode:forwards;
-opacity: 0;
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
-@keyframes fadeUpAnime{
+@keyframes fadeUpAnime {
   from {
     opacity: 0;
-  transform: translateY(100px);
+    transform: translateY(100px);
   }
 
   to {
     opacity: 1;
-  transform: translateY(0);
+    transform: translateY(0);
   }
 }

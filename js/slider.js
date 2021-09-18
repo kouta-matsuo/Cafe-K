@@ -10,8 +10,8 @@ $('#slider').vegas({
     animationDuration: 6000,
     animation: 'kenburns',
     slides: [
-        { src: './images/about.jpg'},
-        { src: './images/header-img.jpg'},
-        { src: './images/cafe-header2.jpg'},
+        { src: './images/about.jpg' },
+        { src: './images/header-img.jpg' },
+        { src: './images/cafe-header2.jpg' },
     ]
 })
