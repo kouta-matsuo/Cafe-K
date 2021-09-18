@@ -1,13 +1,19 @@
-$('.menu-button').click(function () {//ボタンがクリックされたら
+var menu_btn = '.menu-button';
+var nav = '#g-nav';
+var circle = '.circle-bg';
+var nav_a = '#g-nav a';
+
+
+$(menu_btn).click(function () {//ボタンがクリックされたら
     $(this).toggleClass('active');//ボタンにactiveクラスを追加
-    $('#g-nav').toggleClass('panelactive');//ナビゲーションにpanelectiveクラスを付与
-    $('.circle-bg').toggleClass('circleactive');//円背景にcicleactiveクラスを付与
+    $(nav).toggleClass('panelactive');//ナビゲーションにpanelectiveクラスを付与
+    $(circle).toggleClass('circleactive');//円背景にcicleactiveクラスを付与
 });
 
- $('#g-nav a').click(function () {//ナビゲーションのリンクがクリックされたら
-　   $(".menu-button").removeClass('active');//ボタンのactiveクラスを除去
-     $('#g-nav').removeClass('panelactive');//ナビゲーションのpanelactiveクラスを除去
-     $('.circle-bg').removeClass('circleactive');//丸背景のcircleactiveクラスを除去
+ $(nav_a).click(function () {//ナビゲーションのリンクがクリックされたら
+　   $(menu_btn).removeClass('active');//ボタンのactiveクラスを除去
+     $(nav).removeClass('panelactive');//ナビゲーションのpanelactiveクラスを除去
+     $(circle).removeClass('circleactive');//丸背景のcircleactiveクラスを除去
 })
 //スマホでアドレスバー抜いて表示させる
 function setHeight() {

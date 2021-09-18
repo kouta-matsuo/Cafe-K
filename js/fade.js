@@ -3,7 +3,7 @@
     
       // ふわっ
       $('.fade').each(function(){ //fadeというクラス名が
-        let elemPos = $(this).offset().top + 20;//要素より、50px下の
+        let elemPos = $(this).offset().top + 50;//要素より、50px下の
         let scroll = $(window).scrollTop();
         let windowHeight = $(window).height();
         if (scroll >= elemPos - windowHeight){
