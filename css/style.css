@@ -449,8 +449,9 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+  box-shadow: 0.3rem 0.3rem 0.3rem #000;
 }
-.sub-page__container__photo__img__filter {
+.sub-page__container__photo__img--filter {
   filter: blur(0.5rem);
 }
 .sub-page__container__textarea {

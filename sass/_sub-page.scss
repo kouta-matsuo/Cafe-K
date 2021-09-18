@@ -50,8 +50,9 @@
             height: 100%;
             object-fit: cover;
             border-radius: 50%;
+            box-shadow: .3rem .3rem .3rem $black;
         
-        &__filter {
+        &--filter {
             filter: blur(.5rem);
         }
         }

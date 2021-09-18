@@ -1,106 +1,101 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>メニュー</title>
-        <meta name="description" content="Cafe&Kのメニュー">
 
-        <!-- CSS -->
-        <link rel="preload" href="./fonts/kaisei-tokumin-v1-latin-regular.woff2" text="font/woff2" as="font" crossorigin>
-        <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="shortcut icon" href="./images/Cafe&K-icon.ico">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メニュー</title>
+    <meta name="description" content="Cafe&Kのメニュー">
+
+    <!-- CSS -->
+    <link rel="preload" href="./fonts/kaisei-tokumin-v1-latin-regular.woff2" text="font/woff2" as="font" crossorigin>
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./images/Cafe&K-icon.ico">
+</head>
+
+<body>
 
 
-        <!-- ヘッダー -->
-        <header class="header">
-            <a href="index.html"><h1>Cafe&K</h1></a>
-            <!-- ハンバーガーボタン  -->
-            <div class="menu-button"><span></span><span></span><span></span></div>
-            <!-- メニュー -->
-            <nav id="g-nav">
-                <div id="g-nav-list"><!-- ナビゲーションの内容が増えたときに縦スクロースさせるための要素-->
-                    <ul class="nav-list">
-                        <li><a href="about.html">Cafe&Kについて</a></li>
-                        <li><a href="kodawari.html">こだわり</a></li>
-                        <li><a href="menu.html">メニュー</a></li>
-                        
-                    </ul>
-                </div>
-            </nav>
-            <div class="circle-bg"></div><!--円背景用のHTML-->
-            <!-- pc用メニュー -->
-            <nav id="pc-nav">
-                <ul class="nav-list">
-                    <li><a href="about.html">Cafe&Kについて</a></li>
-                    <li><a href="kodawari.html">こだわり</a></li>
-                    <li><a href="menu.html">メニュー</a></li>
+    <!-- ヘッダー -->
+    <header class="header">
+        <a class="header__logo" href="index.html">
+            <h1 class="header__logo__text">Cafe&K</h1>
+        </a>
+        <!-- ハンバーガーボタン  -->
+        <div class="menu-button header__menu-button"><span class="header__menu-button__span--1 header__menu-button__span"></span>
+            <span class="header__menu-button__span--2 header__menu-button__span"></span><span class="header__menu-button__span--3 header__menu-button__span"></span></div>
+        <!-- スマホ用メニュー -->
+        <nav id="g-nav" class="header__sp-nav">
+            <div id="g-nav-list" class="header__sp-nav--hidden">
+                <!-- ナビゲーションの内容が増えたときに縦スクロールさせるための要素-->
+                <ul class="nav-list header__sp-nav__lists">
+                    <li class="header__sp-nav__lists__list"><a class="header__sp-nav__lists__list__link" href="about.html">Cafe&Kについて</a></li>
+                    <li class="header__sp-nav__lists__list"><a class="header__sp-nav__lists__list__link" href="kodawari.html">こだわり</a></li>
+                    <li class="header__sp-nav__lists__list"><a class="header__sp-nav__lists__list__link" href="menu.html">メニュー</a></li>
                 </ul>
-            </nav>
-        </header>
+            </div>
+        </nav>
+        <div class="circle-bg header__bg-show--click"></div>
+        <!--円背景用のHTML-->
+        <!-- pc用メニュー -->
+        <nav id="pc-nav" class="header__pc-nav">
+            <ul class="nav-list header__pc-nav__lists">
+                <li class="header__pc-nav__lists__list"><a class="header__pc-nav__lists__list__link" href="about.html">Cafe&Kについて</a></li>
+                <li class="header__pc-nav__lists__list"><a class="header__pc-nav__lists__list__link" href="kodawari.html">こだわり</a></li>
+                <li class="header__pc-nav__lists__list"><a class="header__pc-nav__lists__list__link" href="menu.html">メニュー</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- メイン -->
-        <main>
-            <section class="sub-page">
-                <div class="sub-page-photo">
-                    <img src="./images/sub-menu-big.jpg" alt="アイスコーヒの写真">
+    <!-- メイン -->
+    <main>
+        <section class="sub-page">
+            <div class="sub-page__photo">
+                <img class="sub-page__photo__img" src="./images/sub-menu-big.jpg" alt="アイスコーヒの写真">
+            </div>
+            <h2 class="sub-page__heading">メニュー</h2>
+            <div class="sub-page__container">
+                <div class="sub-page__container__photo fade">
+                    <img class="sub-page__container__photo__img" src="./images/sub-menu.jpg" alt="アイスコーヒの写真">
                 </div>
-                <h2>メニュー</h2>
-                <div class="sub-page-container">
-                    <div class="container-photo fade">
-                        <img src="./images/sub-menu.jpg" alt="アイスコーヒの写真">
-                    </div>
-                    <div class="sub-page-text fade">
-                        <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
-                            ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
-                            ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
-                            ダミーテキストダミーテキストダミーテキスト
-                        </p>
-                    </div>
-                    <div class="container-photo fade">
-                        <img src="./images/sub-menu2.jpg" alt="パスタの写真">
-                    </div>
-                    <div class="sub-page-text fade">
-                        <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
-                            ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
-                            ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
-                            ダミーテキストダミーテキストダミーテキスト
-                        </p>
-                    </div>
-                    <div class="container-photo fade">
-                        <img src="./images/sub-menu3.jpg" alt="スイーツの写真">
-                    </div>
-                    <div class="sub-page-text fade">
-                        <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
-                            ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
-                            ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
-                            ダミーテキストダミーテキストダミーテキスト
-                        </p>
-                    </div>
+                <div class="sub-page__container__textarea fade">
+                    <p class="sub-page__container__textarea__text">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト ダミーテキストダミーテキストダミーテキスト
+                    </p>
                 </div>
-            </section>
-        </main>
-
-        <!-- フッター -->
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="sito-logo">
-                    <h1>Cafe&K</h1>
+                <div class="sub-page__container__photo fade">
+                    <img class="sub-page__container__photo__img" src="./images/sub-menu2.jpg" alt="パスタの写真">
                 </div>
-                <div class="information">
-                    <p>営業時間：10時~17時</p>
-                    <p>休業日：水曜日</p>
+                <div class="sub-page__container__textarea fade">
+                    <p class="sub-page__container__textarea__text">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト ダミーテキストダミーテキストダミーテキスト
+                    </p>
+                </div>
+                <div class="sub-page__container__photo fade">
+                    <img class="sub-page__container__photo__img" src="./images/sub-menu3.jpg" alt="スイーツの写真">
+                </div>
+                <div class="sub-page__container__textarea fade">
+                    <p class="sub-page__container__textarea__text">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト ダミーテキストダミーテキストダミーテキスト
+                    </p>
                 </div>
             </div>
-            <small>©️Cafe&K.2021</small>
-        </footer>
+        </section>
+    </main>
 
-        <!-- JS -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
-        <script src="./js/header.js" defer></script>
-        <script src="./js/fade.js" defer></script>
-    </body>
+    <!-- フッター -->
+    <footer class="footer">
+        <h1 class="footer__heading">Cafe&K</h1>
+        <div class="footer__information">
+            <p class="footer__information__text">営業時間：10時~17時</p>
+            <p class="footer__information__text">休業日：水曜日</p>
+        </div>
+        </div>
+        <small class="footer__copy">©️Cafe&K.2021</small>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
+    <script src="./js/header.js" defer></script>
+    <script src="./js/fade.js" defer></script>
+</body>
+
 </html>
