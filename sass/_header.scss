@@ -1,5 +1,5 @@
 // ヘッダーのスタイル
-header {
+.header {
     width: 100%;
     height: 5rem;
     background-color: $chairo;
@@ -9,9 +9,9 @@ header {
     position: fixed;
     top: 0;
     z-index: 99;
-    a {
+    &__logo {
         text-decoration: none;
-    h1 {
+    &__text {
         font-family: $font;
         color: $white;
         padding-left: 2rem;
@@ -19,7 +19,7 @@ header {
     }
 }
     //ボタン外側
-    .menu-button {
+    &__menu-button {
         //ボタン内側の起点となるためrelativeを指定
         position: fixed;
         top: 0;
@@ -32,8 +32,8 @@ header {
         @media(min-width: 769px) {
             display: none;
         }
-    }
-    .menu-button span {
+    
+    &__span {
         display: inline-block;
         transition: all .4s;
         position: absolute;
@@ -42,13 +42,13 @@ header {
         background-color: $white;
         border-radius: .5rem;
         width: 45%;
-        &:nth-of-type(1) {
+        &--1 {
             top: 1.3rem;
         }
-        &:nth-of-type(2) {
+        &--2 {
             top: 1.9rem;
         }
-        &:nth-of-type(3) {
+        &--3 {
             top: 2.5rem;
             &::after {
                 content: "Menu";
@@ -61,17 +61,17 @@ header {
             }
         }
     }
-    .menu-button.active span {
-        &:nth-of-type(1) {
+    &.active &__span {
+        &--1 {
             top: 1.4rem;
             left: 1.8rem;
             transform: translateY(.6rem) rotate(-45deg);
             width: 40%;
         }
-        &:nth-of-type(2) {
+        &--2 {
             opacity: 0;
         }
-        &:nth-of-type(3) {
+        &--3{
             top: 2.6rem;
             left: 1.8rem;
             transform: translateY(-.6rem) rotate(45deg);
@@ -85,14 +85,15 @@ header {
             }
         }
     }
-    #g-nav {
+    }
+    &__sp-nav {
         @media(min-width: 769px) {
             display: none;
         }
-    }
+    
     /*ナビゲーションのためのCSS
     アクティブになったエリア*/
-    #g-nav.panelactive {
+       &.panelactive {
         /*position:fixed;にし
         z-indexの数値を大きくして前面へ*/
         position: fixed;
@@ -100,21 +101,21 @@ header {
         top:0;
         width: 100%;
         height: 100vh;
-        #g-nav-list {
+          &, .header__sp-nav--hidden {
             display: block;
             @media(min-width: 769px) {
                 display: none;
             }
         }
-        ul {
+         &, .header__sp-nav__lists {
             opacity: 1;
-            li {
+           &__list {
                 animation: gnaviAnime 1s .2s forwards;
                 opacity: 0;
             }
         }
     }
-    #g-nav-list {
+    &--hidden {
     //ナビゲーションの縦スクロール
     display: none;//最初は非表示
     position: fixed;
@@ -124,7 +125,7 @@ header {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     }
-    #g-nav ul {
+    &__lists {
         opacity: 0;
         position: absolute;
         z-index: 999;
@@ -133,17 +134,21 @@ header {
         padding: 0;
         text-align: center;
         transition: all .6s;
-        li {
+        &__list {
             padding-bottom: 5rem;
             font-size: 2rem;
-            a {
+            &__link {
                 color: $white;
                 text-decoration: none;
+                &.active {
+                    border-bottom: .3rem solid $white;
+                }
             }
         }
     }
+    }
     //丸の拡大
-    .circle-bg {
+    &__bg-show--click {
         position: fixed;
         z-index: 3;
         // 丸の形
@@ -155,28 +160,30 @@ header {
         top: -50%;
         left: calc(50% - 5rem);
         transition: all 1s;
-    }
+    
     // クラスがついたらscaleを拡大
-    .circle-bg.circleactive {
+    &.circleactive {
     transform: scale(50);
     transition: all 2s;
     }
+    }
     //pc用のナビゲーションのスタイル
-    #pc-nav {
+    &__pc-nav{
         display: none;
         @media(min-width: 769px) {
             display: block;
-            .nav-list {
+            &__lists {
                 display: flex;
-                li {
+                &__list {
                     padding-right: 2rem;
                     list-style: none;
-                    a {
+                    &__link {
                         color: $white;
                         text-decoration: none;
                         font-size: 1.2rem;
                         position: relative;
                         padding-bottom: .5rem;
+                        //マウスが乗ったら中央から線が出る
                         &:not(.active)::after {
                             content:'';
                             position: absolute;
@@ -199,9 +206,6 @@ header {
                 }
             }
         }
-    }
-    .nav-list li a.active {
-        border-bottom: .3rem solid $white;
     }
 }
 

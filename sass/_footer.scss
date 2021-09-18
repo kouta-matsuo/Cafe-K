@@ -1,5 +1,5 @@
 // footerのスタイル
-footer {
+.footer {
     margin-top: 5rem;
     background-color: $chairo;
     color: $white;
@@ -7,15 +7,18 @@ footer {
     position: absolute;
     bottom: -5rem;
     z-index: -1;
-    h1 {
+    &__heading {
         padding: 2rem 0 2rem 2rem;
     }
-    .information {
+    &__information {
         padding-bottom: 1rem;
         text-align: center;
         font-size: 1.2rem;
+        &__text {
+            padding-bottom: 1rem;
+        }
     }
-    small {
+    &__copy {
         text-align: center;
         display: block;
         padding-bottom: 1rem;
