@@ -19,8 +19,8 @@ function setHeight() {
   setHeight();
   
   // 3.ブラウザのサイズが変更された時・画面の向きを変えた時に再計算する
-  var windowW = $(window).width();
-  var width_resize;
+  let windowW = $(window).width();
+  let width_resize;
   $(window).on('resize', function() {
       width_resize = $(window).width();
       if(windowW != width_resize) {
