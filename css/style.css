@@ -430,7 +430,7 @@ body {
   }
 }
 .sub-page__container__photo {
-  padding-top: 3rem;
+  padding: 3rem 0 2rem;
   width: 20rem;
   height: 20rem;
   border-radius: 50%;
