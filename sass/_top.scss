@@ -23,7 +23,8 @@
             flex-wrap: wrap;
             padding: 0 5rem 5rem;
         }
-        &__photo {
+    }
+        &__box-photo {
             width: 70%;
             height: 70%;
             border-radius: 50%;
@@ -33,18 +34,19 @@
                 height: 50%;
                 padding-right: 3rem;
             }
-            &__img {
+        }
+            &__box-img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
                 border-radius: 50%;
             }
-            &__img--filter {
+            &__box-img--filter {
                 filter: blur(.2rem);
             }
 
-        }
-        &__textarea {
+        
+        &__box-textarea {
             width: 30rem;
             margin: 2rem auto 0;
             height: auto;
@@ -56,7 +58,8 @@
                 height: 20rem;
                 width: 40%;
             }
-            &__text {
+        }
+            &__box-text {
                 padding: 2rem;
                 font-size: 1.2rem;
                 text-decoration: underline;
@@ -66,7 +69,7 @@
                     font-size: 1.4rem;
                 }
             }
-            &__link {
+            &__box-link {
                 padding: 1rem;
                 border-radius: 3rem;
                 background-color: $chairo;
@@ -87,6 +90,6 @@
                     }
                 }
             }
-        }
-    }
+        
+    
 }
