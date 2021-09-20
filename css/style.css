@@ -61,6 +61,8 @@ body {
   position: fixed;
   top: 0;
   z-index: 99;
+  /*ナビゲーションのためのCSS
+  アクティブになったエリア*/
 }
 .header__logo {
   text-decoration: none;
@@ -86,7 +88,7 @@ body {
     display: none;
   }
 }
-.header__menu-button__span {
+.header__menu-button-span {
   display: inline-block;
   transition: all 0.4s;
   position: absolute;
@@ -96,16 +98,16 @@ body {
   border-radius: 0.5rem;
   width: 45%;
 }
-.header__menu-button__span--1 {
+.header__menu-button-span--1 {
   top: 1.3rem;
 }
-.header__menu-button__span--2 {
+.header__menu-button-span--2 {
   top: 1.9rem;
 }
-.header__menu-button__span--3 {
+.header__menu-button-span--3 {
   top: 2.5rem;
 }
-.header__menu-button__span--3::after {
+.header__menu-button-span--3::after {
   content: "Menu";
   position: absolute;
   top: 1rem;
@@ -114,30 +116,26 @@ body {
   font-size: 1rem;
   text-transform: uppercase;
 }
-.header__menu-button.active .header__menu-button__span--1 {
+.header__menu-button.active .header__menu-button-span--1 {
   top: 1.4rem;
   left: 1.8rem;
   transform: translateY(0.6rem) rotate(-45deg);
   width: 40%;
 }
-.header__menu-button.active .header__menu-button__span--2 {
+.header__menu-button.active .header__menu-button-span--2 {
   opacity: 0;
 }
-.header__menu-button.active .header__menu-button__span--3 {
+.header__menu-button.active .header__menu-button-span--3 {
   top: 2.6rem;
   left: 1.8rem;
   transform: translateY(-0.6rem) rotate(45deg);
   width: 40%;
 }
-.header__menu-button.active .header__menu-button__span--3::after {
+.header__menu-button.active .header__menu-button-span--3::after {
   content: "close";
   transform: translateY(0) rotate(-45deg);
   top: 1rem;
   left: 0.5rem;
-}
-.header__sp-nav {
-  /*ナビゲーションのためのCSS
-  アクティブになったエリア*/
 }
 @media (min-width: 769px) {
   .header__sp-nav {
@@ -402,7 +400,7 @@ body {
     height: calc(100vh - 5rem);
   }
 }
-.sub-page__photo__img {
+.sub-page__photo-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -429,7 +427,7 @@ body {
     padding: 0 5rem;
   }
 }
-.sub-page__container__photo {
+.sub-page__container-photo {
   padding: 3rem 0 2rem;
   width: 20rem;
   height: 20rem;
@@ -438,23 +436,23 @@ body {
   margin: 0 auto;
 }
 @media (min-width: 769px) {
-  .sub-page__container__photo {
+  .sub-page__container-photo {
     width: 45%;
     height: auto;
     padding: 0 3rem 15rem 0;
   }
 }
-.sub-page__container__photo__img {
+.sub-page__container-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0.3rem 0.3rem 0.3rem #000;
 }
-.sub-page__container__photo__img--filter {
+.sub-page__container-img--filter {
   filter: blur(0.5rem);
 }
-.sub-page__container__textarea {
+.sub-page__container-textarea {
   width: 30rem;
   margin: 0 auto;
   height: auto;
@@ -462,19 +460,19 @@ body {
   border-radius: 0.5rem;
 }
 @media (min-width: 769px) {
-  .sub-page__container__textarea {
+  .sub-page__container-textarea {
     width: 30%;
     margin-bottom: 5rem;
   }
 }
-.sub-page__container__textarea__text {
+.sub-page__container-text {
   padding: 2rem;
   text-decoration: underline;
   text-decoration-color: #663300;
   line-height: 2rem;
 }
 @media (min-width: 769px) {
-  .sub-page__container__textarea__text {
+  .sub-page__container-text {
     font-size: 1.3rem;
   }
 }
