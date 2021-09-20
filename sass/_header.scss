@@ -31,127 +31,125 @@
         @media(min-width: 769px) {
             display: none;
         }
-
-
-        &__span {
-            display: inline-block;
-            transition: all .4s;
-            position: absolute;
-            left: 1.4rem;
-            height: .2rem;
-            background-color: $white;
-            border-radius: .5rem;
-            width: 45%;
-        }
-        &__span--1 {
-            top: 1.3rem;
-        }
-        &__span--2 {
-            top: 1.9rem;
-        }
-        &__span--3 {
-            top: 2.5rem;
-            &::after {
-                content: "Menu";
-                position: absolute;
-                top: 1rem;
-                left: -.45rem;
-                color: $white;
-                font-size: 1rem;
-                text-transform: uppercase;
-            }
-        }
-
-
-        &.active &__span--1 {
-            top: 1.4rem;
-            left: 1.8rem;
-            transform: translateY(.6rem) rotate(-45deg);
-            width: 40%;
-        }
-        &.active &__span--2 {
-            opacity: 0;
-        }
-        &.active &__span--3 {
-            top: 2.6rem;
-            left: 1.8rem;
-            transform: translateY(-.6rem) rotate(45deg);
-            width: 40%;
-            &::after {
-                //3つ目の要素のafterにclose表示を指定
-                content: "close";
-                transform: translateY(0) rotate(-45deg);
-                top: 1rem;
-                left: .5rem;
-            }
-        }
-
     }
-    
+
+    &__menu-button-span {
+        display: inline-block;
+        transition: all .4s;
+        position: absolute;
+        left: 1.4rem;
+        height: .2rem;
+        background-color: $white;
+        border-radius: .5rem;
+        width: 45%;
+    }
+    &__menu-button-span--1 {
+        top: 1.3rem;
+    }
+    &__menu-button-span--2 {
+        top: 1.9rem;
+    }
+    &__menu-button-span--3 {
+        top: 2.5rem;
+        &::after {
+            content: "Menu";
+            position: absolute;
+            top: 1rem;
+            left: -.45rem;
+            color: $white;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+    }
+
+
+    &__menu-button.active &__menu-button-span--1 {
+        top: 1.4rem;
+        left: 1.8rem;
+        transform: translateY(.6rem) rotate(-45deg);
+        width: 40%;
+    }
+    &__menu-button.active &__menu-button-span--2 {
+        opacity: 0;
+    }
+    &__menu-button.active &__menu-button-span--3 {
+        top: 2.6rem;
+        left: 1.8rem;
+        transform: translateY(-.6rem) rotate(45deg);
+        width: 40%;
+        &::after {
+            //3つ目の要素のafterにclose表示を指定
+            content: "close";
+            transform: translateY(0) rotate(-45deg);
+            top: 1rem;
+            left: .5rem;
+        }
+    }
+
+
+
     &__sp-nav {
         @media(min-width: 769px) {
             display: none;
         }
+    }
 
-        /*ナビゲーションのためのCSS
+    /*ナビゲーションのためのCSS
     アクティブになったエリア*/
-        &.panelactive {
-            /*position:fixed;にし
+    &__sp-nav.panelactive {
+        /*position:fixed;にし
         z-indexの数値を大きくして前面へ*/
-            position: fixed;
-            z-index: 999;
-            top: 0;
-            width: 100%;
-            height: 100vh;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+    }
+    &__sp-nav.panelactive &__sp-nav--hidden {
+        display: block;
+        @media(min-width: 769px) {
+            display: none;
         }
-            &.panelactive &--hidden {
-                display: block;
-                @media(min-width: 769px) {
-                    display: none;
-                }
-            }
-            &.panelactive &-lists {
-                opacity: 1;
-            }
-                &.panelactive &-list {
-                    animation: gnaviAnime 1s .2s forwards;
-                    opacity: 0;
-                }
-            
-        
-        &--hidden {
-            //ナビゲーションの縦スクロール
-            display: none; //最初は非表示
-            position: fixed;
-            z-index: 999;
-            width: 100%;
-            height: 100vh;
-            overflow: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-        &-lists {
-            opacity: 0;
-            position: absolute;
-            z-index: 999;
-            top: 20%;
-            width: 100%;
-            padding: 0;
-            text-align: center;
-            transition: all .6s;
-        }
-            &-list {
-                padding-bottom: 5rem;
-                font-size: 2rem;
-            }
-                &-link {
-                    color: $white;
-                    text-decoration: none;
-                    &.active {
-                        border-bottom: .3rem solid $white;
-                    }
-                }
-            
-        
+    }
+    &__sp-nav.panelactive &__sp-nav-lists {
+        opacity: 1;
+    }
+    &__sp-nav.panelactive &__sp-nav-list {
+        animation: gnaviAnime 1s .2s forwards;
+        opacity: 0;
+    }
+
+
+    &__sp-nav--hidden {
+        //ナビゲーションの縦スクロール
+        display: none; //最初は非表示
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+        height: 100vh;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    &__sp-nav-lists {
+        opacity: 0;
+        position: absolute;
+        z-index: 999;
+        top: 20%;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        transition: all .6s;
+    }
+    &__sp-nav-list {
+        padding-bottom: 5rem;
+        font-size: 2rem;
+    }
+    &__sp-nav-link {
+        color: $white;
+        text-decoration: none;
+    }
+    &__sp-nav-link.active {
+        border-bottom: .3rem solid $white;
     } //丸の拡大
     &__bg-show--click {
         position: fixed;
@@ -163,52 +161,52 @@
         transform: scale(0);
         top: -50%;
         left: calc(50% - 5rem);
-        transition: all 1s; // クラスがついたらscaleを拡大
-        &.circleactive {
-            transform: scale(50);
-            transition: all 2s;
-        }
-    } 
-    
-    //pc用のナビゲーションのスタイル
+        transition: all 1s;
+    } // クラスがついたらscaleを拡大
+    &__bg-show--click.circleactive {
+        transform: scale(50);
+        transition: all 2s;
+    } //pc用のナビゲーションのスタイル
     &__pc-nav {
         display: none;
         @media(min-width: 769px) {
             display: block;
-        
+
             &-lists {
                 display: flex;
             }
-                &-list {
-                    padding-right: 2rem;
-                    list-style: none;
+            &-list {
+                padding-right: 2rem;
+                list-style: none;
+            }
+            &-link {
+                color: $white;
+                text-decoration: none;
+                font-size: 1.2rem;
+                position: relative;
+                padding-bottom: .5rem; //マウスが乗ったら中央から線が出る
+                &:not(.active)::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 10%; //線の形状
+                    width: 80%;
+                    height: .2rem;
+                    background-color: $white; //アニメーションの指定
+                    transition: all .3s;
+                    transform: scale(0, 1); //上部中央起点
+                    transform-origin: center top;
                 }
-                    &-link {
-                        color: $white;
-                        text-decoration: none;
-                        font-size: 1.2rem;
-                        position: relative;
-                        padding-bottom: .5rem; //マウスが乗ったら中央から線が出る
-                        &:not(.active)::after {
-                            content: '';
-                            position: absolute;
-                            bottom: 0;
-                            left: 10%; //線の形状
-                            width: 80%;
-                            height: .2rem;
-                            background-color: $white; //アニメーションの指定
-                            transition: all .3s;
-                            transform: scale(0, 1); //上部中央起点
-                            transform-origin: center top;
-                        }
-                        &:hover::after {
-                            transform: scale(1, 1);
-                        }
-                    }
-        
-            
+                &:hover::after {
+                    transform: scale(1, 1);
+                }
+            }
+
         }
+
+
     }
+
 }
 
 //アニメーション
